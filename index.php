@@ -7,8 +7,8 @@ $events = json_decode($content, true);// Validate parsed JSON data
     if ($event['type'] == 'message' && $event['message']['type'] == 'text') {			// Get text sent		
       $text = $event['message']['text'];			// Get replyToken			
       $replyToken = $event['replyToken'];			// Build message to reply back	
-      	 $msg ="คุณได้คิวตรวจที่ http://pth.ddns.net/tcpdf/examples/que_card_n.php?ref=MjAxOC0wMy0yODE0";	
-      $messages = [				'type' => 'text',				'text' => $text.$msg			];	
+ 
+      $messages ="คุณได้คิวตรวจที่ http://pth.ddns.net/tcpdf/examples/que_card_n.php?ref=MjAxOC0wMy0yODE0";
       	// Make a POST Request to Messaging API to reply to sender			
      
       $url = 'https://api.line.me/v2/bot/message/reply';		
