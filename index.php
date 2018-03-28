@@ -8,7 +8,7 @@ $events = json_decode($content, true);// Validate parsed JSON data
       $text = $event['message']['text'];      // Get replyToken     
       $replyToken = $event['replyToken'];     // Build message to reply back  
          $msg ="คุณได้คิวตรวจที่ http://pth.ddns.net/tcpdf/examples/que_card_n.php?ref=MjAxOC0wMy0yODE0"; 
-         $text =$text .$msg ;
+         $text =$text .$msg.$replyToken ;
       $messages = ['type' => 'text',  'text' => $text   ];  
         // Make a POST Request to Messaging API to reply to sender      
      
