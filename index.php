@@ -27,8 +27,6 @@ $events = json_decode($content, true);// Validate parsed JSON data
       echo $result . "";    } }}
 echo "OK";
 
-
-curl -v -X GET -H 'Authorization: Bearer 4Twn1MlK34hhjetxAspfd8QoOYQSl3yluDVmRguMTrrPlMtcSQVlAJhe+H3aE+FhlAZ5dOB8cJZr+vnszYz8xknwzX9mHBx7mzpwasExfoE+vsJfGO5doTtd50NmZuSW04CkvI43ffrGu4mJ3uLuXwdB04t89/1O/w1cDnyilFU=' https://api.line.me/v2/bot/profile/{userId};
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient('4Twn1MlK34hhjetxAspfd8QoOYQSl3yluDVmRguMTrrPlMtcSQVlAJhe+H3aE+FhlAZ5dOB8cJZr+vnszYz8xknwzX9mHBx7mzpwasExfoE+vsJfGO5doTtd50NmZuSW04CkvI43ffrGu4mJ3uLuXwdB04t89/1O/w1cDnyilFU=');
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => 'cf2b32132d0788dd0f476592226c40be
 ']);
