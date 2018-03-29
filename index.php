@@ -1,6 +1,6 @@
 <?php
 $link=$_GET['link'];
- 
+ $line_id=$_GET['line_id'];
 $strAccessToken = " 4Twn1MlK34hhjetxAspfd8QoOYQSl3yluDVmRguMTrrPlMtcSQVlAJhe+H3aE+FhlAZ5dOB8cJZr+vnszYz8xknwzX9mHBx7mzpwasExfoE+vsJfGO5doTtd50NmZuSW04CkvI43ffrGu4mJ3uLuXwdB04t89/1O/w1cDnyilFU=";
  
 $content = file_get_contents('php://input');
@@ -59,7 +59,7 @@ $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  
 $arrPostData = array();
-$arrPostData['to'] = "U3b5751f42f6ef750828f9d74adb4c8ce";
+$arrPostData['to'] = $line_id;
 $arrPostData['messages'][0]['type'] = "text";
 $arrPostData['messages'][0]['text'] = $link;
  
