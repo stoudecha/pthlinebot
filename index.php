@@ -74,6 +74,5 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($ch);
 curl_close ($ch);
- 
+ echo"<meta http-equiv=\"refresh\" content=\"0;URL=http://pth.ddns.net/que_app_form.php\">";
 ?>
-
