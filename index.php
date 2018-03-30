@@ -66,6 +66,7 @@ $arrPostData = array();
 $arrPostData['to'] = $line_id;
 $arrPostData['messages'][0]['type'] = "text";
 $arrPostData['messages'][0]['text'] = $link;
+$arrPostData['messages'][0]['type'] = "image";
   $arrPostData['messages'][0]['originalContentUrl'] = "http://pth.ddns.net/images/test.jpg";
   $arrPostData['messages'][0]['previewImageUrl'] = "http://pth.ddns.net/images/test.jpg"; 
  
