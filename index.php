@@ -23,7 +23,8 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $link=$arrJson['events'][0]['source']['userId'];
   $arrPostData['messages'][0]['type'] = "image";
-  $arrPostData['messages'][0]['text'] = "http://pth.ddns.net/images/test.jpg";
+  $arrPostData['messages'][0]['originalContentUrl'] = "http://pth.ddns.net/images/test.jpg";
+  $arrPostData['messages'][0]['previewImageUrl'] = "http://pth.ddns.net/images/test.jpg";
   
 }else if($arrJson['events'][0]['message']['text'] == "จองคิว"){
   $arrPostData = array();
@@ -31,6 +32,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $link=$arrJson['events'][0]['source']['userId'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "จองคิวทีนี่ http://pth.ddns.net/que_register.php?regist=".$link;
+
 }else{
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
