@@ -17,14 +17,14 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
- $link=$arrJson['events'][0]['source']['userId'];
+ $uid=$arrJson['events'][0]['source']['userId'];
 
 }else if($arrJson['events'][0]['message']['text'] == "จองคิว"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $link=$arrJson['events'][0]['source']['userId'];
+  $uid=$arrJson['events'][0]['source']['userId'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "จองคิวทีนี่ http://pth.ddns.net/que_register.php?regist=".$link;
+  $arrPostData['messages'][0]['text'] = "จองคิวทีนี่ http://pth.ddns.net/que_register.php?regist=".$uid;
 }else{
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -48,12 +48,6 @@ curl_close ($ch);
 
 <?php
 
-curl -X POST -H 'Content-Type: application/json; 
-charser=UTF-8' -H 'Authorization: Bearer 4Twn1MlK34hhjetxAspfd8QoOYQSl3yluDVmRguMTrrPlMtcSQVlAJhe+H3aE+FhlAZ5dOB8cJZr+vnszYz8xknwzX9mHBx7mzpwasExfoE+vsJfGO5doTtd50NmZuSW04CkvI43ffrGu4mJ3uLuXwdB04t89/1O/w1cDnyilFU=' -d '{ "to" : "U3b5751f42f6ef750828f9d74adb4c8ce", "messages" : [{ "type": "image", "originalContentUrl": "http://pth.ddns.net/images/test.jpg" , "previewImageUrl": "http://pth.ddns.net/images/test.jpg" }]}' https://api.line.me/v2/bot/message/push
-
-
-
-
  
 //$strAccessToken = "ACCESS_TOKEN";
  
@@ -66,7 +60,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 $arrPostData = array();
 $arrPostData['to'] = $line_id;
 $arrPostData['messages'][0]['type'] = "text";
-$arrPostData['messages'][0]['text'] = $link;
+$arrPostData['messages'][0]['text'] = "คุณสามารถตรวจสอบคิวได้ที่".$link;
 
  
  
