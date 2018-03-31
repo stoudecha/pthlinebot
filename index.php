@@ -4,6 +4,7 @@ $bot = new Linebot();
 $text = $bot->getMessageText();
 $bot->reply($text);
 $imageUrl="http://pth.ddns.net/images/test.jpg";
+$text = $bot->getUserId()
 $bot->pushImage($to, $imageUrl, $previewImageUrl = false)
 
 ?>
