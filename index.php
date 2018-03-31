@@ -3,9 +3,7 @@ require_once __DIR__ . '/pthbot.php';
 $bot = new Linebot();
 $text = $bot->getMessageText();
 $bot->reply($text);
-$imageUrl="http://pth.ddns.net/images/test.jpg";
-$to = $bot->getUserId();
-$bot->pushImage($to, $imageUrl, $previewImageUrl = false)
+
 
 ?>
 <?php
