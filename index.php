@@ -1,13 +1,4 @@
-<?php
-require_once __DIR__ . '/pthbot.php';
-$bot = new Linebot();
-$text = $bot->getMessageText();
-$bot->reply($text);
-$imageUrl="http://pth.ddns.net/images/test.jpg";
-$to = $bot->getUserId()
-$bot->pushImage($to, $imageUrl, $previewImageUrl = false)
 
-?>
 <?php
 $link=$_GET['link'];
  $line_id=$_GET['line_id'];
@@ -89,4 +80,16 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($ch);
 curl_close ($ch);
  echo"<meta http-equiv=\"refresh\" content=\"0;URL=$link\">";
+
+
+?>
+<?php
+require_once __DIR__ . '/pthbot.php';
+$bot = new Linebot();
+$text = $bot->getMessageText();
+$bot->reply($text);
+$imageUrl="http://pth.ddns.net/images/test.jpg";
+$to = $bot->getUserId();
+$bot->pushImage($to, $imageUrl, $previewImageUrl = false)
+
 ?>
