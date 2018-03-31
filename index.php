@@ -1,10 +1,5 @@
 <?php
-require_once __DIR__ . '/pthbot.php';
-$bot = new Linebot();
-$imageUrl="http://pth.ddns.net/images/test.jpg";
-$previewImageUrl="http://pth.ddns.net/images/test.jpg";
-$to = "U3b5751f42f6ef750828f9d74adb4c8ce";
-$bot->pushImage($to,$imageUrl,$previewImageUrl);
+
 
 
 ?>
@@ -32,8 +27,12 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $link=$arrJson['events'][0]['source']['userId'];
-  $arrPostData['messages'][0]['type'] = "image";
-  $arrPostData['messages'][0]['image'] = "http://pth.ddns.net/images/test.jpg";
+    require_once __DIR__ . '/pthbot.php';
+   $bot = new Linebot();
+   $imageUrl="http://pth.ddns.net/images/test.jpg";
+   $previewImageUrl="http://pth.ddns.net/images/test.jpg";
+   $to =$link;
+   $bot->pushImage($to,$imageUrl,$previewImageUrl);
 }else if($arrJson['events'][0]['message']['text'] == "จองคิว"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
