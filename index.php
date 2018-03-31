@@ -1,7 +1,7 @@
 <?php
 $link=$_GET['link'];
  $line_id=$_GET['line_id'];
-$strAccessToken = " 4Twn1MlK34hhjetxAspfd8QoOYQSl3yluDVmRguMTrrPlMtcSQVlAJhe+H3aE+FhlAZ5dOB8cJZr+vnszYz8xknwzX9mHBx7mzpwasExfoE+vsJfGO5doTtd50NmZuSW04CkvI43ffrGu4mJ3uLuXwdB04t89/1O/w1cDnyilFU=";
+$strAccessToken = "4Twn1MlK34hhjetxAspfd8QoOYQSl3yluDVmRguMTrrPlMtcSQVlAJhe+H3aE+FhlAZ5dOB8cJZr+vnszYz8xknwzX9mHBx7mzpwasExfoE+vsJfGO5doTtd50NmZuSW04CkvI43ffrGu4mJ3uLuXwdB04t89/1O/w1cDnyilFU=";
  
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
@@ -47,6 +47,13 @@ curl_close ($ch);
 ?>
 
 <?php
+
+curl -X POST -H 'Content-Type: application/json; 
+charser=UTF-8' -H 'Authorization: Bearer 4Twn1MlK34hhjetxAspfd8QoOYQSl3yluDVmRguMTrrPlMtcSQVlAJhe+H3aE+FhlAZ5dOB8cJZr+vnszYz8xknwzX9mHBx7mzpwasExfoE+vsJfGO5doTtd50NmZuSW04CkvI43ffrGu4mJ3uLuXwdB04t89/1O/w1cDnyilFU=' -d '{ "to" : "U3b5751f42f6ef750828f9d74adb4c8ce", "messages" : [{ "type": "image", "originalContentUrl": "http://pth.ddns.net/images/test.jpg" , "previewImageUrl": "http://pth.ddns.net/images/test.jpg" }]}' https://api.line.me/v2/bot/message/push
+
+
+
+
  
 //$strAccessToken = "ACCESS_TOKEN";
  
