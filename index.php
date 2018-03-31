@@ -6,8 +6,17 @@ $imageUrl="http://pth.ddns.net/images/test.jpg";
 $previewImageUrl=$imageUrl;
 $to = "U3b5751f42f6ef750828f9d74adb4c8ce";
 $bot->pushImage($to, $imageUrl, $previewImageUrl)
-//$text = $bot->getMessageText();
-//$bot->reply($text);
+ $body = array(
+		    'to' => $to,
+		    'messages' => [
+			array(
+			    'type' => 'image',
+			    'originalContentUrl' => $imageUrl,
+			    'previewImageUrl' => $previewImageUrl //? $previewImageUrl : $imageUrl
+			)
+		    ]
+		);
+		$this->push($body);
 ?>
 
 ?>
