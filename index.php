@@ -1,9 +1,4 @@
 <?php
-
-
-
-?>
-<?php
 $link=$_GET['link'];
  $line_id=$_GET['line_id'];
 $strAccessToken = " 4Twn1MlK34hhjetxAspfd8QoOYQSl3yluDVmRguMTrrPlMtcSQVlAJhe+H3aE+FhlAZ5dOB8cJZr+vnszYz8xknwzX9mHBx7mzpwasExfoE+vsJfGO5doTtd50NmZuSW04CkvI43ffrGu4mJ3uLuXwdB04t89/1O/w1cDnyilFU=";
@@ -23,11 +18,6 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
  $link=$arrJson['events'][0]['source']['userId'];
- }else if($arrJson['events'][0]['message']['text'] == "รูป"){
- 
-    "type": "image",
-    "originalContentUrl": "http://pth.ddns.net/images/test.jpg",
-    "previewImageUrl": "http://pth.ddns.net/images/test.jpg";
 
 }else if($arrJson['events'][0]['message']['text'] == "จองคิว"){
   $arrPostData = array();
