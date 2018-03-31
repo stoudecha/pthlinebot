@@ -60,7 +60,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 $arrPostData = array();
 $arrPostData['to'] = $line_id;
 $arrPostData['messages'][0]['type'] = "text";
-$arrPostData['messages'][0]['text'] = "คุณสามารถตรวจสอบคิวได้ที่".$link;
+$arrPostData['messages'][0]['text'] = "คุณสามารถตรวจสอบคิวได้ที่ ".$link;
 
  
  
