@@ -1,12 +1,6 @@
 <?php
-	
-//	CREATE BY NONTACHAI KORNINAI
-//	01 OCTOBER 2016
-//
-//	UPDATE BY NONTACHAI KORNINAI
-//	25 MARCH 2018
-	
-require_once __DIR__ . '/setting.php';
+
+require_once __DIR__ . '/config.php';
 class Linebot {
 	private $channelAccessToken;
 	private $channelSecret;
