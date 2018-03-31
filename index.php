@@ -1,4 +1,12 @@
 <?php
+$line_id=$_GET['line_id'];
+require_once __DIR__ . '/pthbot.php';
+$bot = new Linebot();
+$text = $bot->getMessageText();
+
+$bot->push($line_id,"4545354");
+
+?><?php
 $msg_line=$_GET['msg_line'];
 $link=$_GET['link'];
  $line_id=$_GET['line_id'];
