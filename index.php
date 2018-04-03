@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ .'/pthbot.php';
 $bot = new Linebot();
 //$text = $bot->getMessageText();
 $to="U3b5751f42f6ef750828f9d74adb4c8ce";
