@@ -63,7 +63,6 @@ class Linebot {
 		);
 		$this->push($body);
 	 }
-	 //public function pushImage($to, $imageUrl, $previewImageUrl = false){
    	 public function pushImage($to, $imageUrl, $previewImageUrl = false){
         	$body = array(
 		    'to' => $to,
