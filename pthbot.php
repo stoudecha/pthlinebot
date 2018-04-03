@@ -64,7 +64,7 @@ class Linebot {
 		$this->push($body);
 	 }
 	 //public function pushImage($to, $imageUrl, $previewImageUrl = false){
-   	 public function pushImage($to, $imageUrl, $previewImageUrl){
+   	 public function pushImage($to, $imageUrl, $previewImageUrl = false){
         	$body = array(
 		    'to' => $to,
 		    'messages' => [
@@ -77,6 +77,7 @@ class Linebot {
 		);
 		$this->push($body);
     	}
+
     	public function pushVideo($to, $videoUrl, $previewImageUrl){
         	$body = array(
           	  'to' => $to,
