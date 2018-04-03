@@ -58,11 +58,9 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  
 $arrPostData = array();
 $arrPostData['to'] = $line_id;
-$arrPostData['messages'][0]['type'] = "image";
-//$arrPostData['messages'][0]['originalContentUrl'] = $msg_line." ".$link;
-$arrPostData['messages'][0]['to']="U3b5751f42f6ef750828f9d74adb4c8ce";
-$arrPostData['messages'][0]['originalContentUrl']="http://pth.ddns.net/2018-04-17231.jpg";
-$arrPostData['messages'][0]['previewImageUrl']="http://pth.ddns.net/2018-04-17231.jpg";
+$arrPostData['messages'][0]['type'] = "text";
+$arrPostData['messages'][0]['text'] = $msg_line." ".$link;
+
  
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
