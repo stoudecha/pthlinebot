@@ -5,8 +5,7 @@ class Setting {
 		return $channelAccessToken;
 	}
 	public function getChannelSecret(){
-		$channelSecret = "cf2b32132d0788dd0f476592226c40be
-";
+		$channelSecret = "cf2b32132d0788dd0f476592226c40be";
 		return $channelSecret;
 	}
 	public function getApiReply(){
