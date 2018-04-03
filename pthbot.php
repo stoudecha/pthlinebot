@@ -71,7 +71,7 @@ class Linebot {
 			array(
 			    'type' => 'image',
 			    'originalContentUrl' => $imageUrl,
-			    'previewImageUrl' => $previewImageUrl //? $previewImageUrl : $imageUrl
+			    'previewImageUrl' => $previewImageUrl ? $previewImageUrl : $imageUrl
 			)
 		    ]
 		);
