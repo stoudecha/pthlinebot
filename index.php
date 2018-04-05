@@ -30,7 +30,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
  $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
   $pic=$arrJson['pictureUrl'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "จองคิวทีนี่ http://pth.ddns.net/que_register.php?regist=".$uid."&pic=".$pic;
+  $arrPostData['messages'][0]['text'] = "จองคิวทีนี่ http://pth.ddns.net/que_register.php?regist=".$uid."&pic1=".$pic;
 }else{
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
