@@ -26,12 +26,24 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $uid=$arrJson['events'][0]['source']['userId'];
   $strUrlpic="https://api.line.me/v2/bot/profile/{$uid}";
- $strUrl = "https://api.line.me/v2/bot/message/reply";
 $arrHeader1 = array();
 $arrHeader1[] = "Content-Type: application/json";
 $arrHeader1[] = "Authorization: Bearer {$strAccessToken}";
  $arrJson1 = json_decode($content, true);
+  $arrPostData1 = array();
   $pic=$arrJson1['pictureUrl'];
+ $ch = curl_init();
+curl_setopt($ch, CURLOPT_URL,$strUrlpic);
+curl_setopt($ch, CURLOPT_HEADER, false);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $arrHeader1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($arrPostData1));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+$result = curl_exec($ch);
+curl_close ($ch);
+ 
+ 
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "จองคิวทีนี่ http://pth.ddns.net/que_register.php?regist=".$uid."&pic=".$pic;
 }else{
