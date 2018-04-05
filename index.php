@@ -25,9 +25,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
 
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $uid=$arrJson['events'][0]['source']['userId'];
-  $strUrlpic="https://api.line.me/v2/bot/profile/".$uid;
- $arrHeader[] = "Content-Type: application/json";
- $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
+  $strUrlpic="https://api.line.me/v2/bot/profile/{$uid}";
   $pic=$arrJson['pictureUrl'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "จองคิวทีนี่ http://pth.ddns.net/que_register.php?regist=".$uid."&pic1=".$pic;
