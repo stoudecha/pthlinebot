@@ -8,6 +8,7 @@ $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
  
 $strUrl = "https://api.line.me/v2/bot/message/reply";
+
  
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
@@ -21,10 +22,12 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
  $uid=$arrJson['events'][0]['source']['userId'];
 }else if($arrJson['events'][0]['message']['text'] == "จองคิว"){
   $arrPostData = array();
+
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $uid=$arrJson['events'][0]['source']['userId'];
+  $strUrlpic="https://api.line.me/v2/bot/profile/".$uid;
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "จองคิวทีนี่ http://pth.ddns.net/que_register.php?regist=".$uid;
+  $arrPostData['messages'][0]['text'] = "จองคิวทีนี่ http://pth.ddns.net/que_register.php?regist=".$uid."&pic=".$strUrlpic;
 }else{
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
