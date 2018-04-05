@@ -28,7 +28,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $strUrlpic="https://api.line.me/v2/bot/profile/{$uid}";
   $pic=$arrJson['pictureUrl'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "จองคิวทีนี่ http://pth.ddns.net/que_register.php?regist=".$uid."&pic1=".$pic;
+  $arrPostData['messages'][0]['text'] = "จองคิวทีนี่ http://pth.ddns.net/que_register.php?regist=".$uid."&pic2=".$strUrlpic;
 }else{
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
