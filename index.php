@@ -26,9 +26,14 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $uid=$arrJson['events'][0]['source']['userId'];
   $strUrlpic="https://api.line.me/v2/bot/profile/{$uid}";
-  $pic=$arrJson['pictureUrl'];
+ $strUrl = "https://api.line.me/v2/bot/message/reply";
+$arrHeader1 = array();
+$arrHeader1[] = "Content-Type: application/json";
+$arrHeader1[] = "Authorization: Bearer {$strAccessToken}";
+ $arrJson1 = json_decode($content, true);
+  $pic=$arrJson1['pictureUrl'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "จองคิวทีนี่ http://pth.ddns.net/que_register.php?regist=".$uid."&pic2=".$strUrlpic;
+  $arrPostData['messages'][0]['text'] = "จองคิวทีนี่ http://pth.ddns.net/que_register.php?regist=".$uid."&pic=".$pic;
 }else{
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
