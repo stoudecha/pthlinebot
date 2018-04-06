@@ -62,7 +62,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 $arrPostData = array();
 $arrPostData['to'] = $line_id;
 $arrPostData['messages'][0]['type'] = "text";
-$arrPostData['messages'][0]['text'] = $msg_line." ".$link;
+$arrPostData['messages'][0]['text'] = $msg_line." ".$link."&pname=".$pname;
 //$arrPostData['messages'][0]['type'] = "image";
 //$arrPostData['messages'][0]['originalContentUrl'] = "https://f.ptcdn.info/902/056/000/p6k34559wwESApUhdqC-o.jpg";
 // $arrPostData['messages'][0]['previewImageUrl'] = "https://f.ptcdn.info/902/056/000/p6k34559wwESApUhdqC-o.jpg";
