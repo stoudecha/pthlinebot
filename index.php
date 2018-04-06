@@ -1,7 +1,6 @@
 <?php
 $msg_line=$_GET['msg_line'];
 $link=$_GET['link'];
-$pname=$_GET['pname'];
  $line_id=$_GET['line_id'];
 $strAccessToken = "4Twn1MlK34hhjetxAspfd8QoOYQSl3yluDVmRguMTrrPlMtcSQVlAJhe+H3aE+FhlAZ5dOB8cJZr+vnszYz8xknwzX9mHBx7mzpwasExfoE+vsJfGO5doTtd50NmZuSW04CkvI43ffrGu4mJ3uLuXwdB04t89/1O/w1cDnyilFU=";
  
@@ -87,6 +86,5 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($ch);
 curl_close ($ch);
-$link=$link."&pname=".$pname;
  echo"<meta http-equiv=\"refresh\" content=\"0;URL=$link\">";
 ?>
