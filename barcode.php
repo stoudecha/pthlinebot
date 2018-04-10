@@ -3231,4 +3231,5 @@ class barcode_generator {
 		  3,   6,  12,  24,  48,  96, 192, 173,
 		119, 238, 241, 207, 179,  75, 150,   1,
 	);
-}
+}?>
+<img src="barcode.php?f=jpg&s=code-128&sf=0.8&d=125" >
