@@ -124,6 +124,6 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($ch);
 curl_close ($ch);
-
- echo"<meta http-equiv=\"refresh\" content=\"0;URL=$link\">";
+$lid="&lid=".$line_id;
+ echo"<meta http-equiv=\"refresh\" content=\"0;URL=$link.$lid\">";
 ?>
