@@ -57,7 +57,7 @@ $strUrl = "https://api.line.me/v2/bot/message/push";
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
- 
+ $link=$link."&lid=".$line_id;
 $arrPostData = array();
 $arrPostData['to'] = $line_id;
 $arrPostData['messages'][0]['type'] = "text";
@@ -124,6 +124,6 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($ch);
 curl_close ($ch);
-$link=$link."&lid=".$line_id;
+
  echo"<meta http-equiv=\"refresh\" content=\"0;URL=$link\">";
 ?>
